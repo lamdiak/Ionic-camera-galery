@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+             Camera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button  icon-end (click)=" onTakePhoto()">
+    Take photo
+    <ion-icon name="camera"></ion-icon>
+  </button>
+      <ion-content *ngIf="imageUrl" class="card-background-page">
+        <ion-card>
+                  <img [src]="imageUrl"/>
+                  <div class="card-title">PHOTO</div>
+                  <div class="card-subtitle">1 Listings</div>
+        </ion-card>      
+</ion-content>

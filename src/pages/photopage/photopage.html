@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Photo Page</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+        <ion-card>
+                <img [src]="image" />
+          </ion-card>  
+
+          <button ion-button block icon-end (click)=" showConfirm()">
+                Effacer 
+                <ion-icon ios="ios-trash" md="md-trash"></ion-icon>  
+                
+        </button>
+</ion-content>
+

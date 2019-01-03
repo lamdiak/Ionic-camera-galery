@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      GALERY
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding 
+>
+
+<h5>Galery</h5>  <h6 *ngIf="affichage()">la galerie est vide (Galery empty) </h6>
+
+<ion-grid *ngIf="!affichage()">
+    <ion-row *ngFor="let picture of photos; let i = index" (click)="onGoToPhotopage(i)">
+        
+      <ion-col *ngIf="picture">
+                <ion-card>
+                      <img [src]="picture"/>       
+                </ion-card>   
+      </ion-col>
+      
+    </ion-row>
+   
+</ion-grid>
+
+</ion-content>
